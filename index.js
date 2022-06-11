@@ -76,7 +76,10 @@ app.delete("/movies/:movie",async(req,res)=>{
     res.send("Movie is deleted")
 })
 
-app.listen(8080, async ()=>{
+
+const PORT =process.env.PORT||8080
+
+app.listen(PORT, async ()=>{
     try{
         await connection;
     }
